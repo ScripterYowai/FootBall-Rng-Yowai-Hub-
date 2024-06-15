@@ -56,14 +56,14 @@ game:GetService("ReplicatedStorage").NewCardAdding:FireServer("Godly van Dijk_3"
 end
 }
 
--- Toggel For AutoDeletePrimes
+-- Toggel For AutoSellPrimes
 DupeTab:Toggle{
-	Name = "AutoDeletePrime",
+	Name = "AutoSellPrime",
 	StartingState = false,
 	Description = "Auto",
 	Callback = function(state) 
-     autodeleteprime = state
-     while autodeleteprime do
+     autosellprime = state
+     while autosellprime do
 
 game:GetService("ReplicatedStorage").SellRarity:FireServer("Prime")
    wait(0.1)
