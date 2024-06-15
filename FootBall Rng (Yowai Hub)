@@ -1,0 +1,122 @@
+-- Lib
+
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
+
+-- Gui
+
+local GUI = Mercury:Create{
+    Name = "YowaiHub",
+    Size = UDim2.fromOffset(600, 400),
+    Theme = Mercury.Themes.Dark,
+    Link = "SubToScripter_Yowai"
+}
+
+-- Local Variables 
+
+    local infvalue = false
+
+-- Main Tab
+local DupeTab = GUI:Tab{
+        Name = "Dupes",
+        Icon = "rbxassetid://8569322835"
+}
+
+-- Button Dupe
+DupeTab:Button{
+	Name = "Godly Haland",
+	Description = "Works",
+	Callback = function()
+	game:GetService("ReplicatedStorage").NewCardAdding:FireServer("Godly Haaland_5",game:GetService("ReplicatedStorage").Godly["Godly Haaland"])
+end
+}
+
+DupeTab:Button{
+	Name = "Godly Benzema",
+	Description = "Works",
+	Callback = function()
+	game:GetService("ReplicatedStorage").NewCardAdding:FireServer("Godly Benzema_4",game:GetService("ReplicatedStorage").Godly["Godly Benzema"])
+end
+}
+
+DupeTab:Button{
+	Name = "Godly Mbappe",
+	Description = "Works",
+	Callback = function()
+
+game:GetService("ReplicatedStorage").NewCardAdding:FireServer("Godly Mbappe_5",game:GetService("ReplicatedStorage").Godly["Godly Mbappe"])
+end
+}
+
+DupeTab:Button{
+	Name = "Godly Vandijk",
+	Description = "Works",
+	Callback = function()
+
+game:GetService("ReplicatedStorage").NewCardAdding:FireServer("Godly van Dijk_3",game:GetService("ReplicatedStorage").Godly["Godly van Dijk"])
+end
+}
+
+DupeTab:Button{
+	Name = "Prime Ronaldo",
+	Description = "Works",
+	Callback = function()
+	local args = {
+    [1] = "Prime Ronaldo",
+    [2] = game:GetService("ReplicatedStorage").Prime:FindFirstChild("Prime Ronaldo")
+}
+
+game:GetService("ReplicatedStorage").NewCardAdding:FireServer(unpack(args))
+end
+}
+
+DupeTab:Button{
+	Name = "Aura Prime",
+	Description = "Works",
+	Callback = function()
+     local args = {
+    [1] = "Prime"
+}
+
+game:GetService("ReplicatedStorage").EquipAura:FireServer(unpack(args))
+end
+}
+-- Toggel For Inf Value
+DupeTab:Toggle{
+	Name = "Inf Value",
+	StartingState = false,
+	Description = "Auto",
+	Callback = function(state) 
+     infvalue = state
+     while infvalue do
+
+game:GetService("ReplicatedStorage").PlayerValue:FireServer(300000000)
+   wait()
+    end
+end
+}
+
+DupeTab:Button{
+	Name = "Prime Messi",
+	Description = "Works",
+	Callback = function()
+	local args = {
+    [1] = "Prime Messi",
+    [2] = game:GetService("ReplicatedStorage").Prime:FindFirstChild("Prime Messi")
+}
+
+game:GetService("ReplicatedStorage").NewCardAdding:FireServer(unpack(args))
+end
+}
+
+DupeTab:Button{
+	Name = "Prime Neymar",
+	Description = "Works",
+	Callback = function()
+	local args = {
+    [1] = "Prime Neymar",
+    [2] = game:GetService("ReplicatedStorage").Prime:FindFirstChild("Prime Neymar")
+}
+
+game:GetService("ReplicatedStorage").NewCardAdding:FireServer(unpack(args))
+end
+}
