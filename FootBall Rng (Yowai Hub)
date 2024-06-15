@@ -56,18 +56,40 @@ game:GetService("ReplicatedStorage").NewCardAdding:FireServer("Godly van Dijk_3"
 end
 }
 
-DupeTab:Button{
-	Name = "Prime Ronaldo",
-	Description = "Works",
-	Callback = function()
-	local args = {
+-- Toggel For AutoDeletePrimes
+DupeTab:Toggle{
+	Name = "AutoDeletePrime",
+	StartingState = false,
+	Description = "Auto",
+	Callback = function(state) 
+     autodeleteprime = state
+     while autodeleteprime do
+
+game:GetService("ReplicatedStorage").SellRarity:FireServer("Prime")
+   wait(0.1)
+    end
+end
+}
+
+-- Toggel For AutoRonaldoPrimes
+DupeTab:Toggle{
+	Name = "AutoRonaldoPrime",
+	StartingState = false,
+	Description = "Auto",
+	Callback = function(state) 
+     autoronaldoprime = state
+     while autoronaldoprime do
+     local args = {
     [1] = "Prime Ronaldo",
     [2] = game:GetService("ReplicatedStorage").Prime:FindFirstChild("Prime Ronaldo")
 }
 
 game:GetService("ReplicatedStorage").NewCardAdding:FireServer(unpack(args))
+   wait()
+  end
 end
 }
+
 
 DupeTab:Button{
 	Name = "Aura Prime",
@@ -95,28 +117,40 @@ game:GetService("ReplicatedStorage").PlayerValue:FireServer(300000000)
 end
 }
 
-DupeTab:Button{
-	Name = "Prime Messi",
-	Description = "Works",
-	Callback = function()
-	local args = {
+-- Toggel For AutoMessiPrimes
+DupeTab:Toggle{
+	Name = "AutoMessiPrime",
+	StartingState = false,
+	Description = "Auto",
+	Callback = function(state) 
+     automessiprime = state
+     while automessiprime do
+     local args = {
     [1] = "Prime Messi",
     [2] = game:GetService("ReplicatedStorage").Prime:FindFirstChild("Prime Messi")
 }
 
 game:GetService("ReplicatedStorage").NewCardAdding:FireServer(unpack(args))
+   wait()
+  end
 end
 }
 
-DupeTab:Button{
-	Name = "Prime Neymar",
-	Description = "Works",
-	Callback = function()
-	local args = {
+-- Toggel For AutoNeymarPrimes
+DupeTab:Toggle{
+	Name = "AutoNeymarPrime",
+	StartingState = false,
+	Description = "Auto",
+	Callback = function(state) 
+     autoneymarprime = state
+     while autoneymarprime do
+     local args = {
     [1] = "Prime Neymar",
     [2] = game:GetService("ReplicatedStorage").Prime:FindFirstChild("Prime Neymar")
 }
 
 game:GetService("ReplicatedStorage").NewCardAdding:FireServer(unpack(args))
+   wait()
+   end
 end
 }
